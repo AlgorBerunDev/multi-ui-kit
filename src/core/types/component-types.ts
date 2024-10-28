@@ -1,4 +1,6 @@
+import { ButtonProps } from '@/components/Button';
 import { ReactNode } from 'react';
+import { ThemeConfig } from './theme';
 
 export interface BaseProps {
   className?: string;
@@ -8,26 +10,10 @@ export interface BaseProps {
   'data-testid'?: string;
 }
 
-export interface ThemeConfig {
-  colors: {
-    primary: string;
-    secondary: string;
-    error: string;
-    warning: string;
-    success: string;
-  };
-  spacing: {
-    small: number;
-    medium: number;
-    large: number;
-  };
-}
-
 export interface UIKit {
   name: string;
   components: {
-    Button: React.ComponentType<any>;
-    // Add other components here
+    Button: React.ComponentType<ButtonProps>;
   };
   theme: ThemeConfig;
 }

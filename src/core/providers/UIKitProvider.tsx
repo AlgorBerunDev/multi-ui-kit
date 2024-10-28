@@ -1,7 +1,8 @@
 import React, { createContext, useContext } from 'react';
-import { UIKit, ThemeConfig } from '../types/component-types';
+import { UIKit } from '../types/component-types';
 import { antdKit } from '../../kits/antd';
 import { materialKit } from '../../kits/material';
+import { ThemeConfig } from '../types/theme';
 
 interface UIKitContextType {
   activeKit: UIKit;
