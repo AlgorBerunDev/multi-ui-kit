@@ -5,13 +5,11 @@ import { ReactNode } from 'react';
 export interface ButtonProps extends BaseProps {
   variant?: Variant;
   size?: Size;
-  color?: Color;
   disabled?: boolean;
   loading?: boolean;
-  fullWidth?: boolean;
   startIcon?: ReactNode;
   endIcon?: ReactNode;
   href?: string;
-  type?: 'button' | 'submit' | 'reset';
+  htmlType?: 'button' | 'submit' | 'reset';
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }

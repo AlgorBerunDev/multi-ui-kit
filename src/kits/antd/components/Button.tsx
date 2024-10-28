@@ -1,15 +1,17 @@
 import React from 'react';
 import { Button as AntButton } from 'antd';
 import { ButtonProps } from '../../../components/Button/Button.types';
+import { Size, Variant } from '@/core/types/common';
 
 export const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
   size = 'medium',
+  htmlType,
   children,
   ...props
 }) => {
-  const getAntdType = () => {
-    switch (variant) {
+  const getAntdType = (v: Variant) => {
+    switch (v) {
       case 'primary':
         return 'primary';
       case 'secondary':
@@ -21,8 +23,8 @@ export const Button: React.FC<ButtonProps> = ({
     }
   };
 
-  const getAntdSize = () => {
-    switch (size) {
+  const getAntdSize = (s: Size) => {
+    switch (s) {
       case 'small':
         return 'small';
       case 'large':
@@ -33,7 +35,7 @@ export const Button: React.FC<ButtonProps> = ({
   };
 
   return (
-    <AntButton type={getAntdType()} size={getAntdSize()} {...props}>
+    <AntButton type={getAntdType(variant)} size={getAntdSize(size)} {...props}>
       {children}
     </AntButton>
   );
