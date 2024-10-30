@@ -1,5 +1,5 @@
 import React from 'react';
-import { useUIKit } from '../../core/hooks/useUIKit';
+import { useUIKit } from '@/core/hooks/useUIKit';
 import { ButtonProps } from './Button.types';
 
 export const Button: React.FC<ButtonProps> = (props) => {
