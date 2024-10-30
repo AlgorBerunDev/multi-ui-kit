@@ -1,22 +1,8 @@
-import { BaseProps } from '@/core/types';
-import { Size } from '@/core/types/common';
+import { BaseInputProps } from '@/core/types/base-input.props';
 import { ReactNode } from 'react';
 
-export interface InputProps extends BaseProps {
-  value?: string;
-  defaultValue?: string;
-  placeholder?: string;
+export interface InputProps extends BaseInputProps {
   type?: 'text' | 'password' | 'email' | 'number' | 'tel' | 'url';
-  size?: Size;
-  disabled?: boolean;
-  error?: boolean;
-  helperText?: string;
-  label?: string;
-  required?: boolean;
-  fullWidth?: boolean;
-  multiline?: boolean;
-  rows?: number;
-  maxRows?: number;
   startAdornment?: ReactNode;
   endAdornment?: ReactNode;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;

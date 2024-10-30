@@ -1,11 +1,11 @@
 import { Size } from '@/core/types/common';
 import { BaseProps } from '@/core/types';
-import { SelectOption } from './SelectOption.types';
+import { SelectOptionProps } from './SelectOption.types';
 
 export interface SelectProps extends BaseProps {
   value?: string | number | Array<string | number>;
   defaultValue?: string | number | Array<string | number>;
-  options: SelectOption[];
+  options: SelectOptionProps[];
   placeholder?: string;
   size?: Size;
   disabled?: boolean;

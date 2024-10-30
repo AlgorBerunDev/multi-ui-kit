@@ -1,4 +1,4 @@
-export interface SelectOption {
+export interface SelectOptionProps {
   value: string | number;
   label: string;
   disabled?: boolean;
